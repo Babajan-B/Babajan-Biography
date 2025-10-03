@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --accent: #2dd4bf;
+  --accent-pink: #ff006b;
+  --accent-cyan: #00d4ff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background decorative text */
+.bg-text {
+  position: absolute;
+  font-size: clamp(60px, 15vw, 200px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-text-1 {
+  top: 10%;
+  right: -5%;
+  transform: rotate(-15deg);
+  color: rgba(255, 0, 107, 0.04);
+}
+
+.bg-text-2 {
+  top: 40%;
+  left: -10%;
+  transform: rotate(15deg);
+  color: rgba(0, 212, 255, 0.04);
+}
+
+.bg-text-3 {
+  bottom: 20%;
+  right: -8%;
+  transform: rotate(-10deg);
+  color: rgba(45, 212, 191, 0.04);
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(135deg, #2dd4bf, #00d4ff, #ff006b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.8);
+}
+
+/* Sidebar styles */
+.sidebar-width {
+  width: 280px;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 3px;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(255, 0, 107, 0.3);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #2dd4bf, #00d4ff);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(45, 212, 191, 0.4);
+}
+
+/* Section transitions */
+.section-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
