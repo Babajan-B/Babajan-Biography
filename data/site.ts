@@ -3,7 +3,7 @@ export const site = {
   monogram: "B",
   title: "Lead Bioinformatics Scientist",
   email: "b.babajaan@gmail.com",
-  website: "http://bioinformaticsbb.com",
+  website: "https://bioinformaticsbb.online",
   socials: {
     linkedin: "https://linkedin.com/in/babajan-banaganapalli",
     github: "https://github.com/babajan-banaganapalli",

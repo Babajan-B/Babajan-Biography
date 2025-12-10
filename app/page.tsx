@@ -284,10 +284,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                I am Dr Babajan Banaganapalli, Lead Bioinformatics Scientist with over 15 years of experience in advanced bioinformatics and computational biology. I&apos;m the founder of <a href="http://bioinformaticsbb.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">Bioinformatics with BB</a>, a comprehensive platform that empowers the scientific community through innovative training programs and cutting-edge tools.
+                I am Dr. Babajan Banaganapalli, a Lead Bioinformatics Scientist with more than fifteen years of experience in advanced bioinformatics and computational biology. I am the founder of <a href="https://bioinformaticsbb.online" className="text-cyan-400 hover:text-cyan-300 transition-colors">Bioinformatics with BB</a>, a comprehensive platform dedicated to empowering the scientific community through innovative training programs and state of the art bioinformatics solutions.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                My mission is to bridge the gap between technology and bioinformatics innovation. I specialize in clinical bioinformatics, AI-driven pipeline generation, proteomics analysis, drug design, and machine learning applications in genomics. Through my platform, I provide training from beginner to advanced levels and offer specialized bioinformatics solutions to researchers worldwide.
+                My work centers on advancing genomics and multi omics research through the strategic integration of modern AI capabilities. I have mastered recent AI and foundation model technologies, enabling me to streamline and accelerate the development of sophisticated applications in genomics, clinical bioinformatics, proteomics, and drug discovery. By applying these tools, I design intelligent workflows, automate complex analyses, and deliver scalable solutions that enhance research efficiency and drive scientific innovation. Through my platform, I translate these advancements into practical training and specialized services for researchers worldwide.
               </p>
             </div>
             <div className="space-y-4">
@@ -428,7 +428,7 @@ export default function Home() {
 
               {/* Bioinformatics Tools */}
               <motion.a
-                href="http://bioinformaticsbb.com"
+                href="https://bioinformaticsbb.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -455,7 +455,7 @@ export default function Home() {
 
               {/* Medical Journal Platform */}
               <motion.a
-                href="http://bioinformaticsbb.com"
+                href="https://bioinformaticsbb.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -484,7 +484,7 @@ export default function Home() {
 
               {/* Clinical Analysis Tools */}
               <motion.a
-                href="http://bioinformaticsbb.com"
+                href="https://bioinformaticsbb.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -510,7 +510,7 @@ export default function Home() {
 
               {/* Educational Resources */}
               <motion.a
-                href="http://bioinformaticsbb.com"
+                href="https://bioinformaticsbb.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -537,7 +537,7 @@ export default function Home() {
 
               {/* AI Pipeline Generator */}
               <motion.a
-                href="http://bioinformaticsbb.com"
+                href="https://bioinformaticsbb.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
@@ -646,7 +646,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group glass p-6 rounded-xl hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                onClick={() => window.open("http://bioinformaticsbb.com", "_blank")}
+                onClick={() => window.open("https://bioinformaticsbb.online", "_blank")}
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold group-hover:gradient-text transition-all duration-300">
@@ -755,7 +755,7 @@ export default function Home() {
           <div className="mb-8 text-center">
             <p className="text-gray-400 max-w-2xl mx-auto">
               Access our comprehensive suite of bioinformatics tools designed for researchers and students. 
-              All tools are available at <a href="http://bioinformaticsbb.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">bioinformaticsbb.com</a>
+              All tools are available at <a href="https://bioinformaticsbb.online" className="text-cyan-400 hover:text-cyan-300 transition-colors">bioinformaticsbb.online</a>
             </p>
           </div>
 
@@ -799,7 +799,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="glass p-6 rounded-xl hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                onClick={() => window.open("http://bioinformaticsbb.com", "_blank")}
+                onClick={() => window.open("https://bioinformaticsbb.online", "_blank")}
               >
                 <h3 className="text-xl font-bold gradient-text mb-3">{toolGroup.category}</h3>
                 <p className="text-gray-400 text-sm mb-4">{toolGroup.description}</p>
@@ -881,7 +881,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="http://bioinformaticsbb.com"
+                  href="https://bioinformaticsbb.online"
                   className="flex items-center gap-4 p-4 glass rounded-lg hover:bg-white/10 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center">
@@ -889,7 +889,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold group-hover:gradient-text transition-all duration-300">Website</div>
-                    <div className="text-sm text-gray-400">bioinformaticsbb.com</div>
+                    <div className="text-sm text-gray-400">bioinformaticsbb.online</div>
                   </div>
                 </a>
               </div>
