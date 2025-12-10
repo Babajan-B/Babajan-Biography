@@ -19,6 +19,21 @@ const navItems = [
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
+
+  // Fetch and increment visitor count
+  useEffect(() => {
+    const incrementVisitor = async () => {
+      try {
+        const response = await fetch('https://api.countapi.xyz/hit/babajan-biography.vercel.app/visits');
+        const data = await response.json();
+        setVisitorCount(data.value);
+      } catch (error) {
+        console.error('Failed to fetch visitor count:', error);
+      }
+    };
+    incrementVisitor();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -969,17 +984,17 @@ export default function Home() {
         {/* Footer with Visitor Counter */}
         <footer className="py-8 px-6 lg:px-12 border-t border-white/10">
           <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-4">
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                <circle cx="12" cy="12" r="3"/>
-              </svg>
-              <span>Visitors:</span>
-              <img 
-                src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbabajan-biography.vercel.app&label=&countColor=%2306b6d4&style=flat&labelStyle=none" 
-                alt="Visitor Count"
-                className="h-5"
-              />
+            <div className="flex items-center gap-3 text-gray-400 text-sm">
+              <div className="flex items-center gap-2 px-4 py-2 glass rounded-full">
+                <svg className="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>Visitors:</span>
+                <span className="font-bold gradient-text">
+                  {visitorCount !== null ? visitorCount.toLocaleString() : '...'}
+                </span>
+              </div>
             </div>
             <p className="text-gray-500 text-xs">
               © {new Date().getFullYear()} Dr. Babajan Banaganapalli. All rights reserved.
