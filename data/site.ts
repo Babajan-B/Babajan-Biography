@@ -2,7 +2,7 @@ export const site = {
   name: "Dr Babajan Banaganapalli",
   monogram: "B",
   title: "Lead Bioinformatics Scientist",
-  email: "bioinformatics.bb@gmail.com",
+  email: "b.babajaan@gmail.com",
   website: "http://bioinformaticsbb.com",
   socials: {
     linkedin: "https://linkedin.com/in/babajan-banaganapalli",

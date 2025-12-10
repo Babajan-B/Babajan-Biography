@@ -77,17 +77,17 @@ export default function Home() {
 
         <div className="mt-8">
           <div className="flex gap-4 mb-6">
-            <a href="https://linkedin.com/in/babajan-banaganapalli" className="text-gray-400 hover:text-cyan-400 transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://github.com/babajan-banaganapalli" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <a href="https://github.com/Babajan-B" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://youtube.com/@bioinformaticswithbb" className="text-gray-400 hover:text-red-400 transition-colors">
+            <a href="https://linkedin.com/in/babajan-banaganapalli" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://youtube.com/@bioinformaticswithbb" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">
               <Youtube size={20} />
             </a>
-            <a href="http://bioinformaticsbb.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
-              <ExternalLink size={20} />
+            <a href="https://scholar.google.com/citations?user=UawBJy8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
             </a>
           </div>
           <div className="vertical-text text-xs text-gray-500 text-center">
@@ -145,6 +145,51 @@ export default function Home() {
         <section id="hero" className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 lg:pt-0">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
                               <div className="space-y-8">
+              {/* Social Links Bar */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex items-center gap-4"
+              >
+                <a
+                  href="https://github.com/Babajan-B"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 glass rounded-full hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <Github size={18} className="text-gray-400 group-hover:text-white transition-colors" />
+                  <span className="text-sm text-gray-400 group-hover:text-white transition-colors hidden sm:inline">GitHub</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/babajan-banaganapalli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 glass rounded-full hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <Linkedin size={18} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
+                  <span className="text-sm text-gray-400 group-hover:text-blue-400 transition-colors hidden sm:inline">LinkedIn</span>
+                </a>
+                <a
+                  href="https://youtube.com/@bioinformaticswithbb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 glass rounded-full hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <Youtube size={18} className="text-gray-400 group-hover:text-red-500 transition-colors" />
+                  <span className="text-sm text-gray-400 group-hover:text-red-500 transition-colors hidden sm:inline">YouTube</span>
+                </a>
+                <a
+                  href="https://scholar.google.com/citations?user=UawBJy8AAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 glass rounded-full hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <svg className="w-[18px] h-[18px] text-gray-400 group-hover:text-blue-500 transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+                  <span className="text-sm text-gray-400 group-hover:text-blue-500 transition-colors hidden sm:inline">Scholar</span>
+                </a>
+              </motion.div>
+
               <div className="relative">
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
@@ -266,210 +311,256 @@ export default function Home() {
           {/* Research Category */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold gradient-text mb-6 text-center">Research</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Research Publications",
-                  description: "110+ published papers in bioinformatics, computational biology, and genomics",
-                  icon: "📚",
-                  gradient: "from-blue-400/20 to-indigo-400/20",
-                  category: "Publications",
-                  status: "Published",
-                  count: "110+ Papers"
-                },
-                {
-                  title: "Google Scholar Profile",
-                  description: "Comprehensive research profile with citations and academic contributions",
-                  icon: "🎓",
-                  gradient: "from-purple-400/20 to-pink-400/20",
-                  category: "Academic Profile",
-                  status: "Active",
-                  count: "High Impact"
-                },
-                {
-                  title: "Genomics Research",
-                  description: "Advanced research in variant analysis, GWAS, and genomic data interpretation",
-                  icon: "🧬",
-                  gradient: "from-green-400/20 to-teal-400/20",
-                  category: "Genomics",
-                  status: "Ongoing",
-                  count: "Multiple Studies"
-                },
-                {
-                  title: "Clinical Research",
-                  description: "Clinical bioinformatics research and ACMG guideline applications",
-                  icon: "🏥",
-                  gradient: "from-red-400/20 to-orange-400/20",
-                  category: "Clinical",
-                  status: "Published",
-                  count: "Clinical Tools"
-                },
-                {
-                  title: "AI in Bioinformatics",
-                  description: "Machine learning applications in genomics and drug discovery research",
-                  icon: "🤖",
-                  gradient: "from-cyan-400/20 to-blue-400/20",
-                  category: "AI Research",
-                  status: "Active",
-                  count: "15+ Models"
-                },
-                {
-                  title: "Collaborative Studies",
-                  description: "International collaborations and multi-institutional research projects",
-                  icon: "🌍",
-                  gradient: "from-yellow-400/20 to-orange-400/20",
-                  category: "Collaboration",
-                  status: "Ongoing",
-                  count: "Global Network"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group glass rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative flex items-center justify-center overflow-hidden">
-                    <div className={`w-full h-full bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
-                      <span className="text-4xl opacity-60">{item.icon}</span>
-                    </div>
-                    <div className="absolute top-2 right-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-blue-400/20 text-blue-300">
-                        {item.status}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-2 left-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-black/50 text-white">
-                        {item.count}
-                      </span>
-                    </div>
+            <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              {/* Google Scholar Profile */}
+              <motion.a
+                href="https://scholar.google.com/citations?user=UawBJy8AAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">
+                    Google Scholar
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-2">Research profile with citations</p>
+                  <div className="flex items-center text-blue-400 text-xs group-hover:text-blue-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    View Profile
                   </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold group-hover:gradient-text transition-all duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-400 mb-4 text-sm leading-relaxed">{item.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-300">
-                        {item.category}
-                      </span>
-                      <div className="flex items-center text-blue-400 text-sm group-hover:text-blue-300 transition-colors">
-                        <ExternalLink size={16} className="mr-2" />
-                        View Research
-                      </div>
-                    </div>
+                </div>
+              </motion.a>
+
+              {/* Bioinformatics Books */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
                   </div>
-                </motion.div>
-              ))}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-bold gradient-text mb-1">
+                      Bioinformatics Books
+                    </h3>
+                    <p className="text-gray-400 text-sm">Published on Springer</p>
+                  </div>
+                </div>
+                <div className="space-y-1.5 pl-16">
+                  <a
+                    href="https://link.springer.com/book/10.1007/978-3-030-02634-9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-cyan-400 text-xs hover:text-cyan-300 transition-colors"
+                  >
+                    <ExternalLink size={10} className="mr-1.5 flex-shrink-0" />
+                    <span className="truncate">Essentials of Bioinformatics Vol. I</span>
+                  </a>
+                  <a
+                    href="https://link.springer.com/book/10.1007/978-3-030-18375-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-cyan-400 text-xs hover:text-cyan-300 transition-colors"
+                  >
+                    <ExternalLink size={10} className="mr-1.5 flex-shrink-0" />
+                    <span className="truncate">Essentials of Bioinformatics Vol. II</span>
+                  </a>
+                  <a
+                    href="https://link.springer.com/book/10.1007/978-3-030-19318-8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-cyan-400 text-xs hover:text-cyan-300 transition-colors"
+                  >
+                    <ExternalLink size={10} className="mr-1.5 flex-shrink-0" />
+                    <span className="truncate">Essentials of Bioinformatics Vol. III</span>
+                  </a>
+                </div>
+              </motion.div>
             </div>
           </div>
 
           {/* Software Development Category */}
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-6 text-center">Software Development</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Android Apps",
-                  description: "Quran Telugu & Quran Urdu/English mobile applications for religious studies",
-                  icon: "📱",
-                  gradient: "from-green-400/20 to-emerald-400/20",
-                  category: "Mobile Apps",
-                  status: "Live",
-                  platform: "Google Play"
-                },
-                {
-                  title: "Bioinformatics Tools",
-                  description: "Comprehensive suite of 15+ bioinformatics analysis tools and pipelines",
-                  icon: "🔬",
-                  gradient: "from-cyan-400/20 to-teal-400/20",
-                  category: "Web Tools",
-                  status: "Active",
-                  platform: "Web Platform"
-                },
-                {
-                  title: "Medical Journal Platform",
-                  description: "Journal of Advanced Medicine - research publication and peer-review platform",
-                  icon: "📄",
-                  gradient: "from-blue-400/20 to-indigo-400/20",
-                  category: "Web Development",
-                  status: "Live",
-                  platform: "Website"
-                },
-                {
-                  title: "Clinical Analysis Tools",
-                  description: "ACMG classifier and variant pathogenicity prediction tools",
-                  icon: "⚕️",
-                  gradient: "from-red-400/20 to-pink-400/20",
-                  category: "Clinical Software",
-                  status: "Active",
-                  platform: "Web Tools"
-                },
-                {
-                  title: "Educational Resources",
-                  description: "Books, tutorials, and educational materials for bioinformatics learning",
-                  icon: "📖",
-                  gradient: "from-purple-400/20 to-violet-400/20",
-                  category: "Educational",
-                  status: "Available",
-                  platform: "Publications"
-                },
-                {
-                  title: "AI Pipeline Generator",
-                  description: "Automated bioinformatics pipeline generation using artificial intelligence",
-                  icon: "⚙️",
-                  gradient: "from-orange-400/20 to-yellow-400/20",
-                  category: "AI Tools",
-                  status: "Active",
-                  platform: "Web Platform"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group glass rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative flex items-center justify-center overflow-hidden">
-                    <div className={`w-full h-full bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
-                      <span className="text-4xl opacity-60">{item.icon}</span>
-                    </div>
-                    <div className="absolute top-2 right-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-green-400/20 text-green-300">
-                        {item.status}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-2 left-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-black/50 text-white">
-                        {item.platform}
-                      </span>
-                    </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Android Apps */}
+              <motion.a
+                href="https://play.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Android Apps</h3>
+                  <p className="text-gray-400 text-sm mb-2">Quran Telugu & Urdu/English apps</p>
+                  <div className="flex items-center text-green-400 text-xs group-hover:text-green-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Google Play
                   </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold group-hover:gradient-text transition-all duration-300">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-400 mb-4 text-sm leading-relaxed">{item.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-300">
-                        {item.category}
-                      </span>
-                      <div className="flex items-center text-cyan-400 text-sm group-hover:text-cyan-300 transition-colors">
-                        <ExternalLink size={16} className="mr-2" />
-                        View Software
-                      </div>
-                    </div>
+                </div>
+              </motion.a>
+
+              {/* Bioinformatics Tools */}
+              <motion.a
+                href="http://bioinformaticsbb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Bioinformatics Tools</h3>
+                  <p className="text-gray-400 text-sm mb-2">15+ analysis tools & pipelines</p>
+                  <div className="flex items-center text-cyan-400 text-xs group-hover:text-cyan-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Web Platform
                   </div>
-                </motion.div>
-              ))}
+                </div>
+              </motion.a>
+
+              {/* Medical Journal Platform */}
+              <motion.a
+                href="http://bioinformaticsbb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Medical Journal</h3>
+                  <p className="text-gray-400 text-sm mb-2">Journal of Advanced Medicine</p>
+                  <div className="flex items-center text-blue-400 text-xs group-hover:text-blue-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Website
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* Clinical Analysis Tools */}
+              <motion.a
+                href="http://bioinformaticsbb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Clinical Tools</h3>
+                  <p className="text-gray-400 text-sm mb-2">ACMG classifier & variant prediction</p>
+                  <div className="flex items-center text-red-400 text-xs group-hover:text-red-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Web Tools
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* Educational Resources */}
+              <motion.a
+                href="http://bioinformaticsbb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Educational Resources</h3>
+                  <p className="text-gray-400 text-sm mb-2">Books, tutorials & learning materials</p>
+                  <div className="flex items-center text-purple-400 text-xs group-hover:text-purple-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Publications
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* AI Pipeline Generator */}
+              <motion.a
+                href="http://bioinformaticsbb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">AI Pipeline Generator</h3>
+                  <p className="text-gray-400 text-sm mb-2">Automated bioinformatics pipelines</p>
+                  <div className="flex items-center text-orange-400 text-xs group-hover:text-orange-300 transition-colors">
+                    <ExternalLink size={12} className="mr-1" />
+                    Web Platform
+                  </div>
+                </div>
+              </motion.a>
             </div>
           </div>
         </Section>
@@ -751,7 +842,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <a
-                  href="mailto:bioinformatics.bb@gmail.com"
+                  href="mailto:b.babajaan@gmail.com"
                   className="flex items-center gap-4 p-4 glass rounded-lg hover:bg-white/10 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-400 flex items-center justify-center">
@@ -759,7 +850,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold group-hover:gradient-text transition-all duration-300">Email</div>
-                    <div className="text-sm text-gray-400">bioinformatics.bb@gmail.com</div>
+                    <div className="text-sm text-gray-400">b.babajaan@gmail.com</div>
                   </div>
                 </a>
                 
