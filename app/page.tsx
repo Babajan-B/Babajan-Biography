@@ -400,31 +400,46 @@ export default function Home() {
             <h3 className="text-2xl font-bold gradient-text mb-6 text-center">Software Development</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Android Apps */}
-              <motion.a
-                href="https://play.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300 cursor-pointer flex items-start gap-4"
+                className="group glass rounded-xl p-5 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                    <line x1="12" y1="18" x2="12.01" y2="18"/>
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-bold group-hover:gradient-text transition-all duration-300 mb-1">Android Apps</h3>
-                  <p className="text-gray-400 text-sm mb-2">Quran Telugu & Urdu/English apps</p>
-                  <div className="flex items-center text-green-400 text-xs group-hover:text-green-300 transition-colors">
-                    <ExternalLink size={12} className="mr-1" />
-                    Google Play
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                      <line x1="12" y1="18" x2="12.01" y2="18"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-bold gradient-text mb-1">Android Apps</h3>
+                    <p className="text-gray-400 text-sm">Quran Telugu & Urdu/English apps</p>
                   </div>
                 </div>
-              </motion.a>
+                <div className="space-y-1.5 pl-16">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.QuranTelugu.quran_telugu&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-400 text-xs hover:text-green-300 transition-colors"
+                  >
+                    <ExternalLink size={10} className="mr-1.5 flex-shrink-0" />
+                    <span className="truncate">Quran Telugu</span>
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=quran.urdu.english.quran5&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-400 text-xs hover:text-green-300 transition-colors"
+                  >
+                    <ExternalLink size={10} className="mr-1.5 flex-shrink-0" />
+                    <span className="truncate">Quran Urdu/English</span>
+                  </a>
+                </div>
+              </motion.div>
 
               {/* Bioinformatics Tools */}
               <motion.a
