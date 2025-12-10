@@ -965,6 +965,27 @@ export default function Home() {
             </motion.form>
           </div>
         </Section>
+
+        {/* Footer with Visitor Counter */}
+        <footer className="py-8 px-6 lg:px-12 border-t border-white/10">
+          <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-4">
+            <div className="flex items-center gap-2 text-gray-400 text-sm">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>Visitors:</span>
+              <img 
+                src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fbabajan-biography.vercel.app&label=&countColor=%2306b6d4&style=flat&labelStyle=none" 
+                alt="Visitor Count"
+                className="h-5"
+              />
+            </div>
+            <p className="text-gray-500 text-xs">
+              © {new Date().getFullYear()} Dr. Babajan Banaganapalli. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </main>
     </div>
   );
